@@ -8,9 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'bytebank';
 
-  transferencia: any;
+  transferencias: any[] = []; // precisa inicializar o array antes de fazer push
 
   transferir($event: any) {
-    this.transferencia = $event;
+    console.log($event);
+    const transferencia = {...$event, data: new Date()}
+    this.transferencias.push(transferencia);
   }
 }
