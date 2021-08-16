@@ -8,12 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  constructor(private service: TransferenciaService) {}
-
   title = 'bytebank';
 
-  // recebe o event e propaga pro service
-  transferir($event: any) {
-    this.service.adicionar($event);
-  }
+  constructor(private service: TransferenciaService) {}
+
 }
